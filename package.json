@@ -1,0 +1,16 @@
+{
+  "name": "gcp-event-driven-microservices",
+  "version": "1.0.0",
+  "description": "GCP Event-Driven Microservices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Carlos Arboleda <arbofercho@gmail.com> (https://carlosarboleda.co/)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
