@@ -8,8 +8,10 @@ const delivery = require('../src/delivery');
 
 router.post('/', async (req, res) => {
     const orderId = await orders.createOrder(req.body);
-    await inventory.updateInventory(orderId);
-    await delivery.scheduleDelivery(orderId);
+    await Promise.all([
+        await inventory.updateInventory(orderId),
+        await delivery.scheduleDelivery(orderId)
+    ])
     res.status(201).send({ orderId });
 });
 
