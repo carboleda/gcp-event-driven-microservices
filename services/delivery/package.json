@@ -1,16 +1,14 @@
 {
-  "name": "gcp-event-driven-microservices",
+  "name": "delivery",
   "version": "1.0.0",
-  "description": "GCP Event-Driven Microservices",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "deploy": "gcloud functions deploy scheduleDelivery --trigger-topic order-placed --runtime nodejs14",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Carlos Arboleda <arbofercho@gmail.com> (https://carlosarboleda.co/)",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "dependencies": {}
 }

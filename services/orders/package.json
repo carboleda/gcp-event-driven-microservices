@@ -1,0 +1,23 @@
+{
+  "name": "gcp-event-driven-microservices",
+  "version": "1.0.0",
+  "description": "GCP Event-Driven Microservices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "image:build": "gcloud builds submit --tag gcr.io/avian-destiny-318119/orders",
+    "image:deploy": "gcloud run deploy --image gcr.io/avian-destiny-318119/orders",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "keywords": [],
+  "author": "Carlos Arboleda <arbofercho@gmail.com> (https://carlosarboleda.co/)",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/pubsub": "^2.15.1",
+    "body-parse": "^0.1.0",
+    "express": "^4.17.1"
+  }
+}

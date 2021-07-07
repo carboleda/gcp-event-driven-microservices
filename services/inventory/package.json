@@ -1,0 +1,13 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gcloud functions deploy updateInventory --trigger-topic order-placed --runtime nodejs14",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Carlos Arboleda <arbofercho@gmail.com> (https://carlosarboleda.co/)",
+  "license": "ISC"
+}
