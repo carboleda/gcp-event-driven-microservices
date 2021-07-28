@@ -1,8 +1,10 @@
 'use strict'
 const PORT = parseInt(process.env.PORT || 3000);
-const app = require('express')();
+const express = require('express');
+const app = express();
 const { orders } = require('./routes');
 
+app.use(express.json());
 app.use('/orders', orders);
 
 app.listen(PORT, () => {

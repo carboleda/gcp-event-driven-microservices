@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
     await Promise.all([
         await inventory.updateInventory(orderId),
         await delivery.scheduleDelivery(orderId)
-    ])
+    ]);
     res.status(201).send({ orderId });
 });
 
