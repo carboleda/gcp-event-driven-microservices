@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "image:build": "gcloud builds submit --tag gcr.io/avian-destiny-318119/orders",
-    "image:deploy": "gcloud run deploy --image gcr.io/avian-destiny-318119/orders",
+    "image:build": "gcloud builds submit --tag gcr.io/PROJECT_ID/orders",
+    "image:deploy": "gcloud run deploy --region us-east4 --image gcr.io/PROJECT_ID/orders",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -17,7 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/pubsub": "^2.15.1",
-    "body-parse": "^0.1.0",
     "express": "^4.17.1"
   }
 }
